@@ -1,31 +1,15 @@
 {
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
-  "frontMatter.framework.id": "hugo",
-  "frontMatter.content.pageFolders": [
-    {
-      "title": "Articles",
-      "path": "[[workspace]]/content/posts",
-      "previewPath": "",
-      "trailingSlash": true,
-      "contentTypes": ["article"]
-    }
-  ],
   "frontMatter.taxonomy.contentTypes": [
     {
-      "name": "article",
-      "pageBundle": true,
-      "defaultFileName": "index",
-      "fileType": "md",
-      "previewPath": "",
-      "trailingSlash": true,
-      "template": "[[workspace]]/.frontmatter/templates/article.md",
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
       "fields": [
         {
           "title": "Title",
           "name": "title",
-          "type": "string",
-          "single": true,
-          "required": true
+          "type": "string"
         },
         {
           "title": "Description",
@@ -37,61 +21,38 @@
           "name": "date",
           "type": "datetime",
           "default": "{{now}}",
-          "isPublishDate": true,
-          "required": true
+          "isPublishDate": true
         },
         {
-          "title": "Draft",
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
           "name": "draft",
-          "type": "draft",
-          "default": true
+          "type": "draft"
         },
         {
-          "title": "Targets",
-          "name": "targets",
-          "type": "list"
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
         },
         {
-          "title": "Key points",
-          "name": "key_points",
-          "type": "list"
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
         }
       ]
     }
   ],
+  "frontMatter.framework.id": "hugo",
   "frontMatter.content.publicFolder": "static",
-  "frontMatter.content.filters": ["contentFolders"],
-  "frontMatter.content.defaultSorting": "PublishedDesc",
   "frontMatter.preview.host": "http://localhost:1313",
-  "frontMatter.preview.trailingSlash": true,
-  "frontMatter.website.host": "https://hrkz777.github.io",
-  "frontMatter.snippets.wrapper.enabled": false,
-  "frontMatter.content.snippets": {
-    "Figure": {
-      "description": "Insert an image from the current page bundle with a caption.",
-      "body": "{{< article-figure src=\"[[&mediaUrl]]\" alt=\"[[alt]]\" caption=\"[[caption]]\" >}}",
-      "isMediaSnippet": true
-    },
-    "Note": {
-      "description": "Insert a note block.",
-      "body": [
-        "{{< note title=\"[[title]]\" >}}",
-        "[[body]]",
-        "{{< /note >}}"
-      ],
-      "fields": [
-        {
-          "name": "title",
-          "title": "Title",
-          "type": "string",
-          "default": "注意"
-        },
-        {
-          "name": "body",
-          "title": "Body",
-          "type": "string"
-        }
-      ]
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "content",
+      "path": "[[workspace]]/content"
     }
-  }
+  ]
 }

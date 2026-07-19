@@ -1,6 +1,0 @@
-{{ $src := .Get "src" }}
-{{ $resource := .Page.Resources.GetMatch $src }}
-<figure>
-  <img src="{{ if $resource }}{{ $resource.RelPermalink }}{{ else }}{{ $src | relURL }}{{ end }}" alt="{{ .Get "alt" }}" loading="lazy">
-  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
-</figure>

@@ -1,25 +1,58 @@
 baseURL: https://hrkz777.github.io/
-languageCode: ja-jp
+locale: ja-JP
 defaultContentLanguage: ja
 title: メモ置き場
 timeZone: Asia/Tokyo
-enableRobotsTXT: true
-cleanDestinationDir: true
-disableKinds:
-  - taxonomy
-  - term
+theme: hextra
 
-permalinks:
-  posts: /:slug/
+enableRobotsTXT: true
+hasCJKLanguage: true
+
+outputs:
+  home: [html]
+  page: [html, markdown]
+  section: [html, rss]
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+
+menu:
+  main:
+    - name: ドキュメント
+      pageRef: /docs
+      weight: 1
+    - name: 検索
+      weight: 2
+      params:
+        type: search
+    - name: GitHub
+      weight: 3
+      url: https://github.com/hrkz777/hrkz777.github.io
+      params:
+        icon: github
 
 params:
   description: GitHub Pages 上で公開している記事とメモ
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: false
-
-caches:
-  images:
-    dir: :cacheDir/images
+  navbar:
+    displayTitle: true
+    displayLogo: false
+  theme:
+    default: system
+    displayToggle: true
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
+  editURL:
+    enable: true
+    base: https://github.com/hrkz777/hrkz777.github.io/edit/main/content
