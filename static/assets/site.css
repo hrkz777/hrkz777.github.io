@@ -1,0 +1,372 @@
+:root {
+  --bg: #f5f7f6;
+  --surface: #ffffff;
+  --surface-soft: #f8faf9;
+  --ink: #202428;
+  --ink-soft: #66707a;
+  --line: #e2e7e4;
+  --accent: #55c500;
+  --accent-dark: #3f9600;
+  --accent-soft: #edf8e6;
+  --shadow: 0 1px 3px rgba(25, 35, 30, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "BIZ UDPGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  line-height: 1.8;
+  background: linear-gradient(180deg, #f1f5f2 0, var(--bg) 240px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shell {
+  width: min(calc(100% - 32px), 980px);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-top: 4px solid var(--accent);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+}
+
+.header-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.brand,
+.back-link {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.back-link {
+  color: var(--ink-soft);
+}
+
+.back-link:hover,
+.entry-footer,
+.post a {
+  color: var(--accent-dark);
+}
+
+.main-shell {
+  padding: 40px 0 56px;
+}
+
+.footer {
+  padding: 0 0 48px;
+  color: var(--ink-soft);
+  text-align: center;
+  font-size: 0.84rem;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+.listing-page {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.intro {
+  padding: 8px 0 26px;
+}
+
+.intro h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.intro .lead {
+  max-width: 58ch;
+}
+
+.lead {
+  margin-top: 14px;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+.entry-block + .entry-block {
+  margin-top: 34px;
+}
+
+.list-heading {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.entry-list {
+  display: grid;
+  gap: 14px;
+}
+
+.entry {
+  display: block;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.entry:hover {
+  transform: translateY(-1px);
+  border-color: #c5d4ca;
+  box-shadow: 0 8px 22px rgba(25, 35, 30, 0.07);
+}
+
+.entry h3 {
+  font-size: 1.28rem;
+  line-height: 1.4;
+}
+
+.entry p {
+  margin-top: 7px;
+  color: var(--ink-soft);
+}
+
+.entry-footer {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.post {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 34px 36px 42px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.post-header h1 {
+  font-size: clamp(2.1rem, 5vw, 3.25rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.published-date {
+  margin-bottom: 8px;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+}
+
+.meta-text {
+  margin-top: 16px;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.summary {
+  margin-top: 26px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-soft);
+}
+
+.summary h2 {
+  font-size: 1rem;
+}
+
+.summary ul {
+  margin-top: 9px;
+  padding-left: 20px;
+  color: var(--ink-soft);
+}
+
+.summary li + li {
+  margin-top: 5px;
+}
+
+.post-body {
+  margin-top: 42px;
+}
+
+.post-body h2 {
+  margin-top: 42px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.65rem;
+  line-height: 1.4;
+}
+
+.post-body > h2:first-child {
+  margin-top: 0;
+}
+
+.post-body > p {
+  margin-top: 16px;
+}
+
+.post-body h3 {
+  margin-top: 26px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.post-body h3 + p {
+  margin-top: 8px;
+}
+
+.post code {
+  padding: 0.12em 0.36em;
+  border-radius: 4px;
+  background: #eef1ef;
+  font-family: Consolas, "BIZ UDGothic", monospace;
+  font-size: 0.92em;
+}
+
+figure {
+  margin: 24px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #303238;
+}
+
+figcaption {
+  padding: 12px 14px 14px;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  background: var(--surface-soft);
+}
+
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.figure-grid figure {
+  margin-top: 0;
+}
+
+.note {
+  margin-top: 22px;
+  padding: 16px 18px;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  background: #f7fbf5;
+}
+
+.note strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.steps {
+  counter-reset: article-step;
+  margin-top: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.steps li {
+  counter-increment: article-step;
+  padding: 17px 19px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-soft);
+}
+
+.steps li + li {
+  margin-top: 12px;
+}
+
+.step-title {
+  font-weight: 700;
+}
+
+.step-title::before {
+  margin-right: 8px;
+  color: var(--accent-dark);
+  content: counter(article-step) ".";
+}
+
+.steps p {
+  margin-top: 7px;
+  color: var(--ink-soft);
+}
+
+.post-body > ol {
+  margin-top: 24px;
+  padding-left: 1.5rem;
+}
+
+.post-body > ol li {
+  padding-left: 0.35rem;
+}
+
+.post-body > ol li + li {
+  margin-top: 14px;
+}
+
+@media (max-width: 760px) {
+  .main-shell {
+    padding-top: 24px;
+  }
+
+  .post {
+    padding: 26px 20px 32px;
+  }
+
+  .figure-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell {
+    width: min(calc(100% - 20px), 980px);
+  }
+
+  .entry {
+    padding: 19px;
+  }
+
+  .post-header h1 {
+    font-size: clamp(1.95rem, 11vw, 2.75rem);
+  }
+}

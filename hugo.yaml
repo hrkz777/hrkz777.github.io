@@ -1,0 +1,25 @@
+baseURL: https://hrkz777.github.io/
+languageCode: ja-jp
+defaultContentLanguage: ja
+title: メモ置き場
+timeZone: Asia/Tokyo
+enableRobotsTXT: true
+cleanDestinationDir: true
+disableKinds:
+  - taxonomy
+  - term
+
+permalinks:
+  posts: /:slug/
+
+params:
+  description: GitHub Pages 上で公開している記事とメモ
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+
+caches:
+  images:
+    dir: :cacheDir/images

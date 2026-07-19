@@ -1,0 +1,4 @@
+<aside class="note">
+  <strong>{{ .Get "title" | default "注意" }}</strong>
+  {{ .Inner | markdownify }}
+</aside>

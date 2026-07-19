@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <article class="post">
+    <header class="post-header">
+      <p class="published-date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time></p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+      {{ with .Params.targets }}<p class="meta-text">対象: {{ delimit . " / " }}</p>{{ end }}
+    </header>
+    {{ with .Params.key_points }}
+      <section class="summary">
+        <h2>この記事の要点</h2>
+        <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      </section>
+    {{ end }}
+    <div class="post-body">{{ .Content }}</div>
+  </article>
+{{ end }}
