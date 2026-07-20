@@ -1,0 +1,12 @@
+{{- $page := . -}}
+{{- if eq $page.Kind "page" -}}
+  {{- with $page.Fragments.Headings -}}
+    <aside class="article-inline-toc" aria-label="目次">
+      <details open>
+        <summary>目次</summary>
+        {{ $page.TableOfContents }}
+      </details>
+    </aside>
+  {{- end -}}
+{{- end -}}
+

@@ -7,6 +7,7 @@ theme: hextra
 
 enableRobotsTXT: true
 hasCJKLanguage: true
+cleanDestinationDir: true
 
 outputs:
   home: [html]
@@ -14,6 +15,10 @@ outputs:
   section: [html, rss]
 
 markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false
   highlight:
     noClasses: false
   goldmark:
@@ -25,18 +30,24 @@ menu:
     - name: ドキュメント
       pageRef: /docs
       weight: 1
-    - name: 検索
+    - name: OBS設定
+      pageRef: /obs
       weight: 2
+    - name: ポケモンタイプ相性
+      url: https://hrkz777.github.io/pokemon-type-matchup/
+      weight: 3
+      params:
+        type: link
+    - name: 検索
+      weight: 4
       params:
         type: search
-    - name: GitHub
-      weight: 3
-      url: https://github.com/hrkz777/hrkz777.github.io
-      params:
-        icon: github
 
 params:
   description: GitHub Pages 上で公開している記事とメモ
+  imageZoom:
+    enable: true
+    base: https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist
   navbar:
     displayTitle: true
     displayLogo: false
@@ -53,6 +64,3 @@ params:
     flexsearch:
       index: content
       tokenize: forward
-  editURL:
-    enable: true
-    base: https://github.com/hrkz777/hrkz777.github.io/edit/main/content
