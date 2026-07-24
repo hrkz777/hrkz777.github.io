@@ -15,6 +15,12 @@ layout: hextra-home
     link="/windows/disable-fast-startup/"
   >}}
   {{< hextra/feature-card
+    title="電源ボタンを無効にする"
+    subtitle="電源ボタンを間違えて押しても、シャットダウンされないように設定します。"
+    icon="desktop-computer"
+    link="/windows/disable-power-button/"
+  >}}
+  {{< hextra/feature-card
     title="PCゲームのキャプチャ方法"
     subtitle="ゲーム画面と音声をOBSに取り込むための設定を、方式ごとに解説します。"
     icon="desktop-computer"
