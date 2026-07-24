@@ -27,8 +27,8 @@ markup:
 
 menu:
   main:
-    - name: ドキュメント
-      pageRef: /docs
+    - name: Windows設定
+      pageRef: /windows
       weight: 1
     - name: OBS設定
       pageRef: /obs
