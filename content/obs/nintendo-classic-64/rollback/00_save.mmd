@@ -1,0 +1,36 @@
+%%{init: {"theme": "base", "themeCSS": ".messageText{paint-order:stroke fill;stroke:#ffffff;stroke-width:5px;stroke-linejoin:round;fill:#111111!important;font-weight:600}.noteText{paint-order:stroke fill;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round}"}}%%
+sequenceDiagram
+	autonumber
+
+	actor Player as プレイヤー
+
+	box NINTENDO 64 Nintendo Classics
+		participant Emurator as エミュレーター
+		participant Game as N64ゲーム
+		participant VirtualData as 仮保存データ<br>(ゲーム内セーブ)
+	end
+
+	box Switch本体
+		participant SwitchData as 本体セーブデータ
+	end
+
+	Note over Player,SwitchData: ゲーム起動
+	Note over Player,Emurator: [ユーザー操作] ゲーム起動
+	Emurator->>SwitchData: 前回の確定データを要求
+	SwitchData-->>Emurator: 前回の確定データを読込
+	Emurator->>VirtualData: 前回の確定データをセーブデータとして読み込み
+
+	Note over Emurator,Game: エミュレーターがゲームを開始
+	Game->>VirtualData: セーブデータを要求
+	VirtualData-->>Game: セーブデータを読込
+
+
+	Note over Player,SwitchData: <br>～～ ゲームプレイ ～～<br>
+
+	Player->>Game: セーブ操作
+	Game->>VirtualData: セーブデータを保存
+	VirtualData-->>Game: セーブデータを保存完了
+	Game-->>Player: セーブ完了画面
+
+	Note over VirtualData: セーブしたデータ
+	Note over SwitchData: 起動時のデータ

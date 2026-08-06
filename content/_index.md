@@ -10,33 +10,39 @@ layout: hextra-home
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card
     title="高速スタートアップを無効にする"
-    subtitle="シャットダウン後も不具合が直らないときに、Windowsを完全に終了する設定へ変更します。"
+    subtitle="不具合の元になりがちな、高速スタートアップを無効化します"
     icon="desktop-computer"
     link="/windows/disable-fast-startup/"
   >}}
   {{< hextra/feature-card
     title="電源ボタンを無効にする"
-    subtitle="電源ボタンを間違えて押しても、シャットダウンされないように設定します。"
+    subtitle="電源ボタンを間違えて押しても、シャットダウンされないように設定します"
     icon="desktop-computer"
     link="/windows/disable-power-button/"
   >}}
   {{< hextra/feature-card
     title="PCゲームのキャプチャ方法"
-    subtitle="ゲーム画面と音声をOBSに取り込むための設定を、方式ごとに解説します。"
+    subtitle="ゲーム画面と音声をOBSに取り込むための設定を、方式ごとに解説します"
     icon="desktop-computer"
     link="/obs/pc-game-capture/"
   >}}
   {{< hextra/feature-card
     title="カラーレンジ設定"
-    subtitle="映像の色が濃すぎる・薄すぎるときに、RGBレンジを正しく揃える方法です。"
+    subtitle="映像の色が濃すぎる・薄すぎるといったトラブルはこちら"
     icon="adjustments"
     link="/obs/color-range/"
   >}}
   {{< hextra/feature-card
     title="PSPのキャプチャ方法"
-    subtitle="PSP特有の出力設定から、黒枠の調整や表示比率の整え方まで紹介します。"
+    subtitle="PSP特有の出力設定から、黒枠の調整や表示比率の整え方まで紹介します"
     icon="video-camera"
     link="/obs/psp-capture/"
+  >}}
+  {{< hextra/feature-card
+    title="NINTENDO 64のロールバック現象"
+    subtitle="クラッシュ後にゲーム内セーブ前へ戻る現象と対策を解説します"
+    icon="refresh"
+    link="/obs/nintendo-classic-64/rollback/"
   >}}
 {{< /hextra/feature-grid >}}
 
@@ -47,8 +53,14 @@ layout: hextra-home
 {{< hextra/feature-grid cols="1" >}}
   {{< hextra/feature-card
     title="ポケモンタイプ相性"
-    subtitle="攻撃側と防御側のタイプを選んで、相性倍率をすぐに確認できます。"
+    subtitle="攻撃側と防御側のタイプを選んで、相性倍率をすぐに確認できます"
     icon="sparkles"
-    link="https://hrkz777.github.io/pokemon-type-matchup/"
+    link="/pokemon-type-matchup/"
+  >}}
+  {{< hextra/feature-card
+    title="VTuber Schedules"
+    subtitle="VTuberの最新スケジュールを確認できます。対象は個人の趣味です"
+    icon="sparkles"
+    link="/vtuber-schedules/"
   >}}
 {{< /hextra/feature-grid >}}

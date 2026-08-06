@@ -1,0 +1,22 @@
+%%{init: {"theme": "base", "themeCSS": ".messageText{paint-order:stroke fill;stroke:#ffffff;stroke-width:5px;stroke-linejoin:round;fill:#111111!important;font-weight:600}.noteText{paint-order:stroke fill;stroke:#ffffff;stroke-width:3px;stroke-linejoin:round}"}}%%
+sequenceDiagram
+	autonumber
+
+	actor Player as プレイヤー
+
+	box NINTENDO 64 Nintendo Classics
+		participant Emurator as エミュレーター
+		participant Game as N64ゲーム
+		participant VirtualData as 仮保存データ<br>(ゲーム内セーブ)
+	end
+
+	box Switch本体
+		participant SwitchData as 本体セーブデータ
+	end
+
+	Note over Player,SwitchData: Nintendo64を終了
+	Player->>Emurator: [ユーザー操作] 正常終了
+	Emurator->>VirtualData: 仮保存データの実保存
+	VirtualData->>SwitchData: 仮保存データを実際に保存
+	SwitchData-->>Emurator: セーブデータ保存完了
+	Note over SwitchData: ここで次回起動も<br>ゲーム内で保存したデータになる
