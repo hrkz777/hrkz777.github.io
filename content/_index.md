@@ -63,10 +63,4 @@ layout: hextra-home
     icon="sparkles"
     link="/pokemon-type-matchup/"
   >}}
-  {{< hextra/feature-card
-    title="VTuber Schedules"
-    subtitle="VTuberの最新スケジュールを確認できます。対象は個人の趣味です"
-    icon="sparkles"
-    link="/vtuber-schedules/"
-  >}}
 {{< /hextra/feature-grid >}}
