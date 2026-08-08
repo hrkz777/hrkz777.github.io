@@ -39,6 +39,12 @@ layout: hextra-home
     link="/obs/psp-capture/"
   >}}
   {{< hextra/feature-card
+    title="レトロゲームのキャプチャ方法"
+    subtitle="3色端子・S端子対応のキャプチャーデバイスでOBSへ取り込む方法を紹介します"
+    icon="video-camera"
+    link="/obs/retro-game-capture/"
+  >}}
+  {{< hextra/feature-card
     title="NINTENDO 64のロールバック現象"
     subtitle="クラッシュ後にゲーム内セーブ前へ戻る現象と対策を解説します"
     icon="refresh"
