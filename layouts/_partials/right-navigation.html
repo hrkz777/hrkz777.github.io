@@ -1,0 +1,6 @@
+<div class="right-navigation hx:print:hidden">
+  {{ partial "toc.html" . }}
+  <div class="right-navigation__mobile-menu">
+    {{ partial "sidebar.html" (dict "context" .) }}
+  </div>
+</div>

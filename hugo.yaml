@@ -45,6 +45,10 @@ menu:
       weight: 5
       params:
         type: search
+    - name: テーマ
+      weight: 6
+      params:
+        type: theme-toggle
 
 params:
   description: GitHub Pages 上で公開している記事とメモ
@@ -56,7 +60,7 @@ params:
     displayLogo: false
   theme:
     default: system
-    displayToggle: true
+    displayToggle: false
   footer:
     enable: true
     displayCopyright: true

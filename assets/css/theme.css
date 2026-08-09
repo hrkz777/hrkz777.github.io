@@ -1,0 +1,26 @@
+:root {
+  --site-accent: var(--hx-color-primary-600);
+  --site-border: var(--hx-color-gray-200);
+  --site-footer-background: var(--hx-color-white);
+  --site-page-background: var(--hx-color-gray-100);
+  --site-panel-background: var(--hx-color-white);
+  --site-list-background: var(--hx-color-white);
+  --site-list-hover-background: var(--hx-color-primary-50);
+  --site-strong-text: var(--hx-color-gray-900);
+  --site-muted-text: var(--hx-color-gray-600);
+  --site-tag-background: var(--hx-color-gray-100);
+  --site-toc-background: var(--hx-color-gray-50);
+}
+
+html.dark {
+  --site-border: var(--hx-color-neutral-800);
+  --site-footer-background: var(--hx-color-neutral-900);
+  --site-page-background: var(--hx-color-dark);
+  --site-panel-background: var(--hx-color-neutral-900);
+  --site-list-background: var(--hx-color-dark);
+  --site-list-hover-background: color-mix(in oklab, var(--hx-color-primary-100) 5%, transparent);
+  --site-strong-text: var(--hx-color-gray-50);
+  --site-muted-text: var(--hx-color-neutral-300);
+  --site-tag-background: var(--hx-color-neutral-800);
+  --site-toc-background: var(--hx-color-neutral-900);
+}
