@@ -55,7 +55,8 @@
   padding: 2rem 2.5rem 3rem;
 }
 
-body:has(.article-content-panel) {
+body:has(.article-content-panel),
+body:has(.home-article-list) {
   background: var(--site-page-background);
 }
 
@@ -117,6 +118,10 @@ body:has(.article-content-panel) {
   width: 100%;
   max-width: 56rem;
   margin-top: 2.5rem;
+}
+
+.home-page-heading + .home-article-section {
+  margin-top: 0.5rem;
 }
 
 .home-article-section--embedded {

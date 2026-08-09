@@ -3,9 +3,7 @@ title: メモ置き場
 layout: hextra-home
 ---
 
-<div class="hx:mt-6 hx:mb-6">
-  <h1 class="hx:text-2xl hx:font-semibold">記事</h1>
-</div>
+<h1 class="home-page-heading hx:sr-only">記事</h1>
 
 {{< home-article-list section="windows" title="Windows設定" >}}
 
