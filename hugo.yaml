@@ -33,13 +33,16 @@ menu:
     - name: OBS設定
       pageRef: /obs
       weight: 2
+    - name: ゲームのトラブル一覧
+      pageRef: /game-troubleshooting
+      weight: 3
     - name: ポケモンタイプ相性
       url: https://hrkz777.github.io/pokemon-type-matchup/
-      weight: 3
+      weight: 4
       params:
         type: link
     - name: 検索
-      weight: 4
+      weight: 5
       params:
         type: search
 

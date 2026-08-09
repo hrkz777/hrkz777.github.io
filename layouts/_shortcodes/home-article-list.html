@@ -1,0 +1,32 @@
+{{- $sectionName := .Get "section" -}}
+{{- $section := site.GetPage "section" $sectionName -}}
+{{- if not $section -}}
+  {{- errorf "home-article-list: section %q was not found" $sectionName -}}
+{{- end -}}
+{{- $title := .Get "title" | default $section.Title -}}
+{{- $embedded := eq (.Get "embedded") "true" -}}
+
+<section class="home-article-section{{ if $embedded }} home-article-section--embedded{{ end }}">
+  {{- if not $embedded }}
+    <header class="home-article-section__header">
+      <h2><a href="{{ $section.RelPermalink }}">{{ $title }}</a></h2>
+      <a class="home-article-section__more" href="{{ $section.RelPermalink }}">すべて見る</a>
+    </header>
+  {{- end }}
+  <div class="home-article-list">
+    {{- range $section.RegularPages.ByWeight }}
+      <article class="home-article-item">
+        <a class="home-article-item__link" href="{{ .RelPermalink }}">
+          <h3>{{ .LinkTitle }}</h3>
+          {{- with .Params.tags }}
+            <ul class="home-article-tags" aria-label="タグ">
+              {{- range . }}
+                <li>{{ . }}</li>
+              {{- end }}
+            </ul>
+          {{- end }}
+        </a>
+      </article>
+    {{- end }}
+  </div>
+</section>

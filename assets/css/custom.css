@@ -64,3 +64,148 @@ html.dark .article-inline-toc nav a:hover {
   }
 }
 
+.home-article-section {
+  width: 100%;
+  max-width: 56rem;
+  margin-top: 2.5rem;
+}
+
+.home-article-section--embedded {
+  margin-top: 1.5rem;
+}
+
+.home-article-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.home-article-section__header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.home-article-section__header h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-article-section__header h2 a:hover,
+.home-article-section__more {
+  color: #3f9f21;
+}
+
+.home-article-section__more {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-article-section__more:hover {
+  text-decoration: underline;
+}
+
+.home-article-list {
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: #ffffff;
+}
+
+.home-article-item + .home-article-item {
+  border-top: 1px solid #e5e7eb;
+}
+
+.home-article-item__link {
+  display: block;
+  padding: 1rem 1.25rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.home-article-item__link:hover {
+  background: #f7faf7;
+}
+
+.home-article-item__link h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.home-article-item__link:hover h3 {
+  color: #3f9f21;
+}
+
+.home-article-item__link p {
+  margin: 0.35rem 0 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.home-article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.65rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-article-tags li {
+  border-radius: 0.25rem;
+  background: #edf2f0;
+  padding: 0.15rem 0.45rem;
+  color: #4b5563;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+html.dark .home-article-list {
+  border-color: #404040;
+  background: #171717;
+}
+
+html.dark .home-article-item + .home-article-item {
+  border-color: #404040;
+}
+
+html.dark .home-article-item__link:hover {
+  background: #1f291f;
+}
+
+html.dark .home-article-item__link h3 {
+  color: #f3f4f6;
+}
+
+html.dark .home-article-item__link:hover h3,
+html.dark .home-article-section__header h2 a:hover,
+html.dark .home-article-section__more {
+  color: #7fd35c;
+}
+
+html.dark .home-article-item__link p {
+  color: #a3a3a3;
+}
+
+html.dark .home-article-tags li {
+  background: #2b332b;
+  color: #d1d5db;
+}
+
+@media (max-width: 40rem) {
+  .home-article-section {
+    margin-top: 2rem;
+  }
+
+  .home-article-item__link {
+    padding: 0.9rem 1rem;
+  }
+}
