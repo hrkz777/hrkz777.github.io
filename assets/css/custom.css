@@ -95,7 +95,7 @@ html.dark .article-inline-toc nav a:hover {
 
 .home-article-section__header h2 a:hover,
 .home-article-section__more {
-  color: #3f9f21;
+  color: var(--hx-color-primary-600);
 }
 
 .home-article-section__more {
@@ -110,13 +110,13 @@ html.dark .article-inline-toc nav a:hover {
 
 .home-article-list {
   overflow: hidden;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--hx-color-gray-200);
   border-radius: 0.5rem;
-  background: #ffffff;
+  background: var(--hx-color-white);
 }
 
 .home-article-item + .home-article-item {
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--hx-color-gray-200);
 }
 
 .home-article-item__link {
@@ -128,26 +128,19 @@ html.dark .article-inline-toc nav a:hover {
 }
 
 .home-article-item__link:hover {
-  background: #f7faf7;
+  background: var(--hx-color-primary-50);
 }
 
 .home-article-item__link h3 {
   margin: 0;
-  color: #1f2937;
+  color: var(--hx-color-gray-900);
   font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.5;
 }
 
 .home-article-item__link:hover h3 {
-  color: #3f9f21;
-}
-
-.home-article-item__link p {
-  margin: 0.35rem 0 0;
-  color: #6b7280;
-  font-size: 0.875rem;
-  line-height: 1.6;
+  color: var(--hx-color-primary-600);
 }
 
 .home-article-tags {
@@ -161,43 +154,37 @@ html.dark .article-inline-toc nav a:hover {
 
 .home-article-tags li {
   border-radius: 0.25rem;
-  background: #edf2f0;
+  background: var(--hx-color-gray-100);
   padding: 0.15rem 0.45rem;
-  color: #4b5563;
+  color: var(--hx-color-gray-600);
   font-size: 0.75rem;
   line-height: 1.4;
 }
 
 html.dark .home-article-list {
-  border-color: #404040;
-  background: #171717;
+  border-color: var(--hx-color-neutral-800);
+  background: var(--hx-color-dark);
 }
 
 html.dark .home-article-item + .home-article-item {
-  border-color: #404040;
+  border-color: var(--hx-color-neutral-800);
 }
 
 html.dark .home-article-item__link:hover {
-  background: #1f291f;
+  background: color-mix(in oklab, var(--hx-color-primary-100) 5%, transparent);
 }
 
 html.dark .home-article-item__link h3 {
-  color: #f3f4f6;
+  color: var(--hx-color-gray-50);
 }
 
-html.dark .home-article-item__link:hover h3,
-html.dark .home-article-section__header h2 a:hover,
-html.dark .home-article-section__more {
-  color: #7fd35c;
-}
-
-html.dark .home-article-item__link p {
-  color: #a3a3a3;
+html.dark .home-article-item__link:hover h3 {
+  color: var(--hx-color-primary-600);
 }
 
 html.dark .home-article-tags li {
-  background: #2b332b;
-  color: #d1d5db;
+  background: var(--hx-color-neutral-800);
+  color: var(--hx-color-neutral-300);
 }
 
 @media (max-width: 40rem) {
