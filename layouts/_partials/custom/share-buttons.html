@@ -1,0 +1,20 @@
+{{- if eq .Kind "page" -}}
+  {{- $pageURL := .Permalink | urlquery -}}
+  {{- $pageTitle := .Title | urlquery -}}
+  {{- $xShareURL := printf "https://x.com/intent/tweet?url=%s&text=%s" $pageURL $pageTitle | safeURL -}}
+  <section class="article-share" aria-labelledby="article-share-title">
+    <p id="article-share-title" class="article-share__title">この記事を共有</p>
+    <div class="article-share__buttons">
+      <a
+        class="article-share__button"
+        href="{{ $xShareURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Xでこの記事を共有"
+      >
+        {{- partial "utils/icon.html" (dict "name" "x-twitter" "attributes" `width="16" height="16" aria-hidden="true"`) -}}
+        <span>X</span>
+      </a>
+    </div>
+  </section>
+{{- end -}}

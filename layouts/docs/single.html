@@ -13,6 +13,7 @@
           {{ end }}
           {{ partial "custom/content-begin.html" . }}
           {{ .Content }}
+          {{ partial "custom/share-buttons.html" . }}
           {{ partial "custom/content-end.html" . }}
         </div>
         {{ partial "components/last-updated.html" . }}
